@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🪄 Hogwarts Grade Calculator</title>
+
+    <!-- ✅ Include PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.6.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.6.1/core.js"></script>
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f1c40f;
+            font-family: "Georgia", serif;
+            text-align: center;
+        }
+        h1 { color: #e67e22; }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px #f39c12;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        input {
+            width: 80%;
+            padding: 6px;
+            border: 1px solid #f1c40f;
+            border-radius: 5px;
+            background-color: #2c2c2c;
+            color: #f1c40f;
+        }
+        button {
+            margin-top: 20px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #d35400; }
+        #student_info, #summary, #output { margin-top: 20px; white-space: pre-line; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hogwarts Grades Calculator</h1>
+        <p>Are you ready to take the O.W.Ls? Check your grades to see if you have to lock in more!</p>
+
+        <input type="text" id="first_name" placeholder="First Name"><br>
+        <input type="text" id="last_name" placeholder="Last Name"><br>
+        <input type="text" id="house_name" placeholder="House"><br><br>
+
+        <h2>Enter your grades:</h2>
+        <input type="number" id="astronomy" placeholder="Astronomy"><br>
+        <input type="number" id="potions" placeholder="Potions"><br>
+        <input type="number" id="charms" placeholder="Charms"><br>
+        <input type="number" id="transfigurations" placeholder="Transfigurations"><br>
+        <input type="number" id="flying" placeholder="Flying"><br>
+        <input type="number" id="herbology" placeholder="Herbology"><br>
+        <input type="number" id="history_of_magic" placeholder="History of Magic"><br>
+        <input type="number" id="dada" placeholder="Defense Against the Dark Arts"><br>
+
+   
+        <button py-click="general_weighted_average">Calculate GWA</button>
+
+        <div id="student_info"></div>
+        <div id="summary"></div>
+        <div id="output"></div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
